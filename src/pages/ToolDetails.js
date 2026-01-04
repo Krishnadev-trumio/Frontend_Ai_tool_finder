@@ -92,12 +92,12 @@ const ToolDetails = () => {
       <div className="tool-details-header">
         <div className="tool-title-section">
           <h1>{tool.name}</h1>
-          <div className="tool-rating-large">⭐ {tool.rating.toFixed(1)}</div>
+          <div className="tool-rating-large"><i className="fas fa-star"></i>{tool.rating.toFixed(1)}</div>
         </div>
 
         <div className="tool-meta-info">
-          <span className="meta-badge">📁 {tool.category}</span>
-          <span className="meta-badge">💰 {tool.pricingtype}</span>
+          <span className="meta-badge"><i className="fas fa-folder-open"></i>{tool.category}</span>
+          <span className="meta-badge"><i className="fas fa-wallet"></i>{tool.pricingtype}</span>
         </div>
       </div>
 
@@ -137,11 +137,11 @@ const ToolDetails = () => {
                   onChange={handleReviewChange}
                   required
                 >
-                  <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-                  <option value="4">⭐⭐⭐⭐ (4)</option>
-                  <option value="3">⭐⭐⭐ (3)</option>
-                  <option value="2">⭐⭐ (2)</option>
-                  <option value="1">⭐ (1)</option>
+                  <option value="5"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>(5)</option>
+                  <option value="4"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>(4)</option>
+                  <option value="3"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>(3)</option>
+                  <option value="2"><i className="fas fa-star"></i><i className="fas fa-star"></i> (2)</option>
+                  <option value="1"><i className="fas fa-star"></i> (1)</option>
                 </select>
               </div>
 
@@ -169,7 +169,7 @@ const ToolDetails = () => {
             ) : (
               reviews.map(review => (
                 <div key={review.id} className="review-card">
-                  <div className="review-rating">⭐ {review.rating.toFixed(1)}</div>
+                  <div className="review-rating"><i className="fas fa-star"></i>{review.rating.toFixed(1)}</div>
                   <p className="review-content">{review.content}</p>
                 </div>
               ))

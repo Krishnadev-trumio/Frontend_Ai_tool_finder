@@ -13,7 +13,7 @@ const Home = () => {
           </p>
           <div className="hero-buttons">
             <Link to="/tools" className="btn btn-primary"><i className="fas fa-search"></i>Browse Tools</Link>
-            <Link to="/admin/login" className="btn btn-secondary">Admin Portal</Link>
+            <Link to="/admin/login" className="btn btn-secondary"><i className="fas fa-user-shield"></i>Admin Portal</Link>
           </div>
         </div>
       </section>
@@ -22,22 +22,22 @@ const Home = () => {
         <h2 className="section-title">Why Choose AI Tools Hub?</h2>
         <div className="features-grid">
           <div className="feature-card">
-            <div className="feature-icon">🔍</div>
+            <div className="feature-icon"><i className="fas fa-compass feature-icon"></i></div>
             <h3>Discover</h3>
             <p>Browse through a curated collection of AI tools across various categories</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">⭐</div>
+            <div className="feature-icon"><i className="fas fa-star"></i></div>
             <h3>Review</h3>
             <p>Share your experience and read reviews from other users</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">🎯</div>
+            <div className="feature-icon"><i className="fas fa-filter feature-icon"></i></div>
             <h3>Filter</h3>
             <p>Find the perfect tool by filtering by category, price, and ratings</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">📊</div>
+            <div className="feature-icon"><i className="fas fa-star"></i></div>
             <h3>Compare</h3>
             <p>Make informed decisions with detailed tool information and ratings</p>
           </div>

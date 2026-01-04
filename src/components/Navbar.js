@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          🤖 AI Tools Hub
+          <i className="fas fa-robot"></i>AI Tools Hub
         </Link>
 
         <ul className="navbar-menu">
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link to="/admin/add-tool" className="navbar-link">Add Tool</Link>
               </li>
               <li className="navbar-item">
-                <span className="navbar-user">👤 {user?.username}</span>
+                <span className="navbar-user"><i className="fas fa-user"></i>{user?.username}</span>
               </li>
               <li className="navbar-item">
                 <button onClick={handleLogout} className="navbar-button">Logout</button>

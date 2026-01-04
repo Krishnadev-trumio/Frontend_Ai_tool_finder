@@ -83,14 +83,14 @@ const AdminDashboard = () => {
 
       <div className="dashboard-stats">
         <div className="stat-card">
-          <div className="stat-icon">🔧</div>
+          <div className="stat-icon"><i className="fas fa-toolbox"></i></div>
           <div className="stat-info">
             <h3>{tools.length}</h3>
             <p>Total Tools</p>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">⭐</div>
+          <div className="stat-icon"><i className="fas fa-star"></i></div>
           <div className="stat-info">
             <h3>{pendingReviews.length}</h3>
             <p>Pending Reviews</p>
@@ -100,7 +100,7 @@ const AdminDashboard = () => {
 
       <div className="dashboard-actions">
         <Link to="/admin/add-tool" className="btn-primary">
-          ➕ Add New Tool
+          <i className="fas fa-plus"></i> Add New Tool
         </Link>
       </div>
 
@@ -127,7 +127,7 @@ const AdminDashboard = () => {
                       <td>{tool.name}</td>
                       <td>{tool.category}</td>
                       <td>{tool.pricingtype}</td>
-                      <td>⭐ {tool.rating.toFixed(1)}</td>
+                      <td><i className="fas fa-star"></i>{tool.rating.toFixed(1)}</td>
                       <td className="action-buttons">
                         <button
                           onClick={() => fetchPendingReviews(tool.id)}
@@ -139,7 +139,7 @@ const AdminDashboard = () => {
                           onClick={() => handleRecalculateRating(tool.id)}
                           className="btn-small"
                         >
-                          Recalculate Rating
+                        <i className="fas fa-sync"></i> Recalculate Rating
                         </button>
                       </td>
                     </tr>
@@ -160,7 +160,7 @@ const AdminDashboard = () => {
                 {pendingReviews.map(review => (
                   <div key={review.id} className="review-card">
                     <div className="review-header">
-                      <span className="review-rating">⭐ {review.rating.toFixed(1)}</span>
+                      <span className="review-rating"><i className="fas fa-star"></i>{review.rating.toFixed(1)}</span>
                       <span className="review-status">{review.status}</span>
                     </div>
                     <p className="review-content">{review.content}</p>

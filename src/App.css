@@ -64,12 +64,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a855f7;
+  background: #ffffff;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c084fc;
+  background: #ffffff;
 }
 
 /* Animations */

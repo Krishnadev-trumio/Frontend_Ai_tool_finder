@@ -78,10 +78,10 @@ const ToolsList = () => {
 
   return (
     <div className="tools-list-container">
-      <h1 className="page-title">Browse AI Tools</h1>
+      <h1 className="page-title"><i className="fas fa-robot"></i>Browse AI Tools</h1>
 
       <div className="filters-section">
-        <h3>Filter Tools</h3>
+        <h3><i className="fas fa-filter"></i>Filter Tools</h3>
         <div className="filters-grid">
           <div className="filter-group">
             <label>Category</label>
@@ -115,7 +115,7 @@ const ToolsList = () => {
           </div>
 
           <div className="filter-group">
-            <button onClick={resetFilters} className="btn-reset">Reset Filters</button>
+            <button onClick={resetFilters} className="btn-reset"><i className="fas fa-rotate-left"></i>Reset Filters</button>
           </div>
         </div>
       </div>
@@ -132,14 +132,14 @@ const ToolsList = () => {
             <div key={tool.id} className="tool-card">
               <div className="tool-header">
                 <h3 className="tool-name">{tool.name}</h3>
-                <span className="tool-rating">⭐ {tool.rating.toFixed(1)}</span>
+                <span className="tool-rating"><i className="fas fa-star"></i>{tool.rating.toFixed(1)}</span>
               </div>
 
               <p className="tool-description">{tool.description}</p>
 
               <div className="tool-meta">
-                <span className="tool-category">📁 {tool.category}</span>
-                <span className="tool-price">💰 {tool.pricingtype}</span>
+                <span className="tool-category"><i className="fas fa-folder-open"></i>{tool.category}</span>
+                <span className="tool-price"><i className="fas fa-wallet"></i>{tool.pricingtype}</span>
               </div>
 
               <div className="tool-usecases">
