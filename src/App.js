@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import MacWindowControls from './components/MacWindowControls';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
@@ -18,7 +17,6 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="App">
-          <MacWindowControls />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

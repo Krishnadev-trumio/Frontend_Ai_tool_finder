@@ -12,7 +12,7 @@ const Home = () => {
             Explore, review, and learn about cutting-edge AI tools for your projects
           </p>
           <div className="hero-buttons">
-            <Link to="/tools" className="btn btn-primary">Browse Tools</Link>
+            <Link to="/tools" className="btn btn-primary"><i className="fas fa-search"></i>Browse Tools</Link>
             <Link to="/admin/login" className="btn btn-secondary">Admin Portal</Link>
           </div>
         </div>

@@ -4,41 +4,42 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Check if user is logged in on mount
-    const storedToken = localStorage.getItem('token');
+    // const storedToken = localStorage.getItem('token');
     const storedUsername = localStorage.getItem('username');
 
-    if (storedToken && storedUsername) {
-      setToken(storedToken);
+    if (storedUsername) {
+      // setToken(storedToken);
       setUser({ username: storedUsername });
     }
     setLoading(false);
   }, []);
 
-  const login = (token, username) => {
-    localStorage.setItem('token', token);
+  const login = (username) => {
+    // localStorage.setItem('token', token);
     localStorage.setItem('username', username);
-    setToken(token);
+    // setToken(token);
     setUser({ username });
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    // localStorage.removeItem('token');
     localStorage.removeItem('username');
-    setToken(null);
+    // setToken(null);
     setUser(null);
   };
 
   const isAuthenticated = () => {
-    return !!token;
+    // return !!token;
+    return !!user;
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout, isAuthenticated, loading }}>
+    <AuthContext.Provider value={{ user, login, logout, isAuthenticated, loading }}>
       {children}
     </AuthContext.Provider>
   );
