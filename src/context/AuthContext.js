@@ -4,41 +4,35 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in on mount
-    const storedToken = localStorage.getItem('token');
+    // Check if user is logged in on mount (cookie-based auth)
     const storedUsername = localStorage.getItem('username');
 
-    if (storedToken && storedUsername) {
-      setToken(storedToken);
+    if (storedUsername) {
       setUser({ username: storedUsername });
     }
     setLoading(false);
   }, []);
 
-  const login = (token, username) => {
-    localStorage.setItem('token', token);
+  const login = (username) => {
+    // With cookie-based auth, only store username for display
     localStorage.setItem('username', username);
-    setToken(token);
     setUser({ username });
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
     localStorage.removeItem('username');
-    setToken(null);
     setUser(null);
   };
 
   const isAuthenticated = () => {
-    return !!token;
+    return !!user;
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout, isAuthenticated, loading }}>
+    <AuthContext.Provider value={{ user, login, logout, isAuthenticated, loading }}>
       {children}
     </AuthContext.Provider>
   );

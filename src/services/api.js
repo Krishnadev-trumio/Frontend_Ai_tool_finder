@@ -7,18 +7,29 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true, // Enable sending cookies with requests
 });
 
-// Add JWT token to requests if available
+// Request interceptor for debugging
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+    console.log('Making request to:', config.url);
+    console.log('With credentials:', config.withCredentials);
     return config;
   },
   (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Response interceptor for debugging
+api.interceptors.response.use(
+  (response) => {
+    console.log('Response from:', response.config.url, '- Status:', response.status);
+    return response;
+  },
+  (error) => {
+    console.error('Request failed:', error.config?.url, '- Status:', error.response?.status);
     return Promise.reject(error);
   }
 );

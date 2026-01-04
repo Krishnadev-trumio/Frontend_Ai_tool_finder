@@ -18,7 +18,6 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="App">
-          <MacWindowControls />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

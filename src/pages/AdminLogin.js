@@ -27,8 +27,15 @@ const AdminLogin = () => {
 
     try {
       const response = await authAPI.login(credentials);
-      const { token, username } = response.data;
-      login(token, username);
+      console.log('Login response:', response.data);
+      
+      // With cookie-based auth, we only need the username for display
+      const username = response.data.username || response.data.name || credentials.name;
+      console.log('Username:', username);
+      
+      // Store only username for display purposes (no token needed)
+      login(username);
+      
       navigate('/admin/dashboard');
     } catch (err) {
       setError(err.response?.data?.Error || 'Login failed. Please check your credentials.');

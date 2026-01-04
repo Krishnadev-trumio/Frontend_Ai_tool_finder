@@ -2,7 +2,7 @@
   background: #1a1a1a;
   box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
   position: sticky;
-  top: 48px;
+  /* top: 48px; */
   z-index: 999;
   border-bottom: 1px solid #a855f7;
 }
