@@ -1,154 +1,156 @@
 .home-container {
-  min-height: 100vh;
-  background: #0a0a0a;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #2b2b2b;
+  background-color: #fffaf5;
 }
 
 .hero-section {
-  background: #1a1a1a;
-  color: white;
-  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #fff1eb,
+    #ffe4c4,
+    #fff7cc
+  );
+  padding: 100px 20px;
   text-align: center;
-  border-bottom: 2px solid #a855f7;
-  box-shadow: 0 10px 40px rgba(168, 85, 247, 0.3);
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  color: #a855f7;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  background: linear-gradient(
+    90deg,
+    #ff7a18,
+    #ff3d00,
+    #ffca28
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  color: #e5e7eb;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  color: #5f5f5f;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 12px 22px;
   border-radius: 10px;
+  font-size: 0.95rem;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+.btn-prime {
+  background: linear-gradient(
+    90deg,
+    #ff7a18,
+    #ff3d00
+  );
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 122, 24, 0.35);
 }
 
-.btn-primary {
-  background: #a855f7;
-  color: white;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+.btn-prime:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 61, 0, 0.45);
 }
 
-.btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid #a855f7;
+.btn-sec {
+  background: #ffffff;
+  color: #ff5722;
+  border: 1px solid #ffd6c9;
+}
+
+.btn-sec:hover {
+  background: #fff0e8;
 }
 
 .features-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #0a0a0a;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #a855f7;
+  font-size: 2.2rem;
+  margin-bottom: 48px;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .feature-card {
-  padding: 2rem;
-  text-align: center;
-  border-radius: 15px;
-  background: #1a1a1a;
-  transition: all 0.3s;
-  border: 1px solid #a855f7;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+  background: #ffffff;
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.12);
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.4);
-  border-color: #c084fc;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(255, 87, 34, 0.25);
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #ff5722;
 }
 
 .feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #a855f7;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .feature-card p {
-  color: #d1d5db;
-  line-height: 1.6;
+  color: #6b6b6b;
+  font-size: 0.95rem;
 }
 
 .cta-section {
-  background: #1a1a1a;
-  color: white;
-  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #ff7a18,
+    #ff3d00,
+    #ffca28
+  );
+  color: #ffffff;
   text-align: center;
-  border-top: 2px solid #a855f7;
-  box-shadow: 0 -10px 40px rgba(168, 85, 247, 0.3);
+  padding: 70px 20px;
 }
 
 .cta-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #a855f7;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
 }
 
 .cta-section p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #e5e7eb;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
+.cta-section .btn-primary {
+  background: #ffffff;
+  color: #ff5722;
 }
-
