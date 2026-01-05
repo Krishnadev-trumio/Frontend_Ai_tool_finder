@@ -7,10 +7,9 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true, // Enable sending cookies with requests
+  withCredentials: true, 
 });
 
-// Request interceptor for debugging
 api.interceptors.request.use(
   (config) => {
     console.log('Making request to:', config.url);
@@ -22,7 +21,6 @@ api.interceptors.request.use(
   }
 );
 
-// Response interceptor for debugging
 api.interceptors.response.use(
   (response) => {
     console.log('Response from:', response.config.url, '- Status:', response.status);
@@ -34,13 +32,11 @@ api.interceptors.response.use(
   }
 );
 
-// Auth APIs
 export const authAPI = {
   register: (adminData) => api.post('/auth/admin/register', adminData),
   login: (credentials) => api.post('/auth/admin/login', credentials),
 };
 
-// User APIs
 export const userAPI = {
   getAllTools: () => api.get('/user/getAll'),
   getFilteredTools: (params) => api.get('/user/tools', { params }),
@@ -48,7 +44,6 @@ export const userAPI = {
   addReview: (toolId, reviewData) => api.post(`/user/user/reviews/add/${toolId}`, reviewData),
 };
 
-// Admin APIs
 export const adminAPI = {
   getAllTools: () => api.get('/admin/aitools'),
   addTool: (toolData) => api.post('/admin/aitools/add', toolData),

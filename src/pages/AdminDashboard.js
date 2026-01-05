@@ -58,16 +58,16 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleRecalculateRating = async (toolId) => {
-    try {
-      const response = await adminAPI.recalculateRating(toolId);
-      setSuccessMessage(response.data.status);
-      fetchTools();
-    } catch (err) {
-      setError('Failed to recalculate rating');
-      console.error('Error recalculating rating:', err);
-    }
-  };
+  // const handleRecalculateRating = async (toolId) => {
+  //   try {
+  //     const response = await adminAPI.recalculateRating(toolId);
+  //     setSuccessMessage(response.data.status);
+  //     fetchTools();
+  //   } catch (err) {
+  //     setError('Failed to recalculate rating');
+  //     console.error('Error recalculating rating:', err);
+  //   }
+  // };
 
   if (loading) return <div className="loading">Loading dashboard...</div>;
 
@@ -135,12 +135,12 @@ const AdminDashboard = () => {
                         >
                           View Reviews
                         </button>
-                        <button
+                        {/* <button
                           onClick={() => handleRecalculateRating(tool.id)}
                           className="btn-small"
                         >
                         <i className="fas fa-sync"></i> Recalculate Rating
-                        </button>
+                        </button> */}
                       </td>
                     </tr>
                   ))}
